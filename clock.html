@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="clock.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+        </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Zunchrono AI</h1>
+      <div id="clock">00:00:00</div>
+      <p id="formatLabel">Current Format: 24-hour</p>
+      <button id="toggleFormat">Switch to 12-hour</button>
+      <button id="toggleTheme">Enable 🌙 Mode</button>
+
+      <!-- Timezone Selection Dropdown -->
+      <select id="timezoneSelector">
+        <option value="UTC">UTC</option>
+        <option value="Asia/Kolkata">India (IST)</option>
+        <option value="America/New_York">New York (EST)</option>
+        <option value="Europe/London">London (GMT)</option>
+        <option value="Asia/Tokyo">Tokyo (JST)</option>
+      </select>
+
+      <!-- 🔹 Alarm Feature -->
+      <div class="alarm-container">
+        <h2>Set Alarm</h2>
+        <input type="time" id="alarmTime" />
+        <button id="setAlarm">Set Alarm</button>
+        <button id="clearAlarm">Delete Alarm</button>
+        <p id="alarmStatus">No alarm set</p>
+      </div>
+      <audio id="alarmSound" src="germany-eas-alarm-1945-242750.mp3"></audio>
+
+      <!-- Alarm Popup Message -->
+      <div id="alarmPopup" class="alarm-popup">
+        <p>⏰ Alarm ringing!</p>
+        <button id="dismissAlarm">Dismiss</button>
+      </div>
+    </div>
+
+    <script src="clock.js"></script>
+    <script src="alarm.js"></script>
+    <script src="darkmode.js"></script>
+    <script src="timeformat.js"></script>
+    <script src="timezone.js"></script>
+  </body>
+</html>
